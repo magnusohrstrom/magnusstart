@@ -1,0 +1,389 @@
+@import "varmix";
+
+h1, h2, h3, h4, a, p, {
+  color: white;
+  font-family: 'Nothing You Could Do', cursive;
+}
+h1 {
+  font-size: 3em;
+}
+
+h2{
+  font-family:'Open Sans';
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+body {
+  background: #DAE2F8; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #DAE2F8 , #D6A4A4); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #DAE2F8 , #D6A4A4);
+  overflow-x:hidden;
+  width: 100%;
+  height: 100em;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.space-ship {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 50px dashed $heading-color;
+}
+
+
+//Amination
+.planet {
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  position:absolute;
+  border-radius: 100%;
+  background:$heading-color;
+  animation-timing-function: ease;
+  @include transition(all 0.4s ease);
+  z-index: 1000;
+  &:hover {
+    animation-play-state: paused;
+    background:$siris;
+    @include transform(rotate(0deg));
+  }
+  & img {
+    height: 1em;
+    margin:0.5em 0 0 0;
+    align-self:center;
+    padding:0;
+  }
+  &:nth-child(1){
+    height:8em;
+    width:8em;
+    top:20%;
+    left:20%;
+    @include animation(planet-portfolio,200s,forwards,infinite);
+  }
+  &:nth-child(2){
+    @include animation(planet2,270s,forwards,infinite);
+    height:5em;
+    width: 5em;
+    top:10%;
+    left:70%;
+
+  }
+  &:nth-child(3){
+    @include animation(planet2,370s,forwards,infinite);
+    height:1em;
+    width: 1em;
+    top:10%;
+    left:80%;
+    position: fixed;
+
+  }
+  &:nth-child(4){
+    @include animation(planet4,250s,forwards,infinite);
+    height:3em;
+    width: 3em;
+    top:70%;
+    left:90%;
+    //background-color: $siris;
+  }
+  &:nth-child(5){
+    @include animation(planet5,200s,forwards,infinite);
+    height:5em;
+    width:5em ;
+    top:60%;
+    left:10%;
+  }
+  &:nth-child(6){
+    @include animation(planet6,200s,forwards,infinite);
+    height:2em;
+    width: 2em;
+    position: fixed;
+    top:70%;
+    left:70%;
+    background: $siris;
+  }
+  &:nth-child(7){
+    @include animation(planet2,370s,forwards,infinite);
+    height:1em;
+    width: 1em;
+    top:10%;
+    left:80%;
+    position: fixed;
+  }
+  &:nth-child(8){
+    @include animation(planet2,370s,forwards,infinite);
+    height:1em;
+    width: 1em;
+    top:10%;
+    left:80%;
+    position: fixed;
+  }
+  &:nth-child(9){
+    @include animation(planet2,370s,forwards,infinite);
+    height:1em;
+    width: 1em;
+    top:10%;
+    left:80%;
+    position: fixed;
+  }
+  &:nth-child(10){
+    @include animation(planet2,370s,forwards,infinite);
+    height:1em;
+    width: 1em;
+    top:10%;
+    left:80%;
+    position: fixed;
+  }
+}
+
+
+
+//Animation Planets
+
+//Portfolio planet
+@include keyframe(planet-portfolio){
+
+  0% {
+    @include transform(translate(0,0));
+  }
+
+
+
+  50%{
+  @include transform(translate(60vw,-10vh));
+
+  }
+
+
+
+  100%{
+  @include transform(translate(0,0));
+
+  }
+
+
+
+
+  /*
+
+  0% {
+    height:10em;
+    width:10em;
+    top:40%;
+    left:10%;
+  }
+
+  25%{
+    height:10em;
+    width:10em;
+    top:40%;
+    left:50%;
+  }
+
+  50%{
+    height:10em;
+    width:10em;
+    top:40%;
+    left:90%;
+  }
+
+  75%{
+    height:10em;
+    width:10em;
+    top:40%;
+    left:50%;
+  }
+
+  100%{
+    height:10em;
+    width:10em;
+    top:40%;
+    left:10%;
+  }
+
+
+  */
+
+
+
+};
+
+@include keyframe(planet2){
+  0% {
+    @include transform(translate(0,0));
+  }
+
+
+
+  50%{
+  @include transform(translate(-60vw,-20vh));
+
+  }
+
+
+  100%{
+  @include transform(translate(0,0));
+
+  }
+};
+
+@include keyframe(planet4){
+  0% {
+    @include transform(translate(0,0));
+  }
+
+
+
+  50%{
+  @include transform(translate(-80vw,0));
+
+  }
+
+
+  100%{
+  @include transform(translate(0,0));
+
+  }
+};
+
+@include keyframe(planet5){
+  0% {
+    @include transform(translate(0,0));
+  }
+
+
+
+  50%{
+  @include transform(translate(80vw,20vh) rotate(900deg));
+
+  }
+
+
+  100%{
+  @include transform(translate(0,0) rotate(0deg));
+
+  }
+};
+
+
+@include keyframe(planet6){
+  0% {
+    @include transform(translate(0,0));
+  }
+  50%{
+  @include transform(translate(-50vw,-10vh));
+  }
+
+  100%{
+  @include transform(translate(0,0));
+  }
+};
+
+
+
+.loading-container {
+
+  @include flexbox;
+  @include align-items(center);
+  @include flex-direction(column);
+  @include justify-content(center);
+  top:20%;
+  left:30%;
+  width: 36em;
+  height: 36em;
+  border-radius: 100%;
+
+  background: $heading-color;
+  z-index:100;
+  @include breakpoint(smedium){
+    width: 20em;
+    height: 20em;
+    & h1 {
+      font-size:2em;
+    }
+  };
+  &.active {
+    display:inline;
+  }
+}
+
+.loading-object {
+  display: none;
+  margin:-1em 0 0 -1em;
+  position: absolute;
+  height: 4em;
+  width: 4em;
+  border:0.2em solid $secondary-color;
+  //background: $secondary-color;
+  @include animation(loading,9.5s,forwards,infinite);
+  animation-timing-function: linear;
+  &:nth-child(2){
+    height: 0.8em;
+    width: 0.8em;
+    border:0.2em solid $secondary-color;
+    //background: $secondary-color;
+    @include animation(loading,9s,forwards,infinite);
+
+  }
+  &:nth-child(3){
+    height: 2em;
+    width: 1em;
+    border:0.2em solid $secondary-color;
+    //background: $secondary-color;
+    @include animation(loading,12s,forwards,infinite);
+  }
+  &.article:nth-child(1){
+    z-index: 0;
+    height: 23em;
+    width: 23em;
+    animation:none;
+    bottom:10%;
+    left: 0%;
+    border-top: none;
+    border-left:none;
+    border-right: none;
+    //border-bottom: none;
+  }
+
+}
+
+@include keyframe(loading){
+  0%{
+    @include transform(rotate(0deg));
+    top:0;
+    left:0;
+  }
+  25% {
+    @include transform(rotate(400deg));
+    top:0;
+    left:100%;
+  }
+  50% {
+    @include transform(rotate(800deg));
+    top:100%;
+    left:100%;
+  }
+  75% {
+    @include transform(rotate(1200deg));
+    left:0;
+    top:100%;
+  }
+  100% {
+    @include transform(rotate(1600deg));
+    left:0;
+    top:0;
+  }
+};
