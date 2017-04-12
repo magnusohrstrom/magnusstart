@@ -9,15 +9,17 @@ h1 {
 }
 
 h2{
-  font-family:'Open Sans';
+  
 }
 
 a {
   text-decoration: none;
   font-size: 1.5em;
 }
-html{
+html, body{
   overflow-x: hidden;
+  margin:0;
+  padding:0;
 }
 body {
   background: #DAE2F8; /* fallback for old browsers */
@@ -25,7 +27,7 @@ body {
   background: linear-gradient(to left, #DAE2F8 , #D6A4A4);
   overflow-x:hidden;
   width: 100%;
-  height: 100em;
+  height: 120em;
 }
 
 main {
@@ -50,6 +52,7 @@ main {
 
 //Amination
 .planet {
+  overflow-x: hidden;
   @include flexbox();
   @include flex-direction(column);
   @include justify-content(center);
@@ -64,10 +67,10 @@ main {
   &:hover {
     animation-play-state: paused;
     background:$siris;
-    @include transform(rotate(0deg));
+
   }
   & img {
-    height: 1em;
+    height: 1.5em;
     margin:0.5em 0 0 0;
     align-self:center;
     padding:0;
@@ -79,6 +82,10 @@ main {
     width:22em;
     top:90%;
     left:20%;
+    @include breakpoint(large){
+      width: 14em;
+      height: 14em;
+    };
     & a {
       font-size: 2em;
     }
@@ -90,8 +97,8 @@ main {
   }
   &:nth-child(2){
     @include animation(planet2,270s,forwards,infinite);
-    height:5em;
-    width: 5em;
+    height:8em;
+    width: 8em;
     top:130%;
     left:70%;
     @include fade(hide);
@@ -113,9 +120,9 @@ main {
   }
   &:nth-child(4){
     @include animation(planet4,250s,forwards,infinite);
-    height:3em;
-    width: 3em;
-    top:160%;
+    height:3.5em;
+    width: 3.5em;
+    top:170%;
     left:40%;
     visibility: hidden;
     @include fade(hide);
@@ -127,14 +134,19 @@ main {
     @include animation(planet5,200s,forwards,infinite);
     height:5em;
     width:5em ;
-    top:60%;
+    top:140%;
     left:10%;
+    visibility: hidden;
+    @include fade(hide);
+    &.active{
+      @include fade(show);
+    }
   }
   &:nth-child(6){
     @include animation(planet6,200s,forwards,infinite);
     height:2em;
     width: 2em;
-    position: fixed;
+
     top:70%;
     left:70%;
     background: $siris;
@@ -147,7 +159,7 @@ main {
     top:10%;
     left:80%;
     position: fixed;
-      background: $siris;
+    background: $siris;
   }
   &:nth-child(8){
     @include animation(planet2,370s,forwards,infinite);
@@ -168,7 +180,31 @@ main {
     background: $siris;
   }
   &:nth-child(10){
-    @include animation(planet2,370s,forwards,infinite);
+    @include animation(planet2,470s,forwards,infinite);
+    height:1em;
+    width: 1em;
+    top:60%;
+    left:20%;
+    position: fixed;
+  }
+  &:nth-child(11){
+    @include animation(planet2,470s,forwards,infinite);
+    height:2em;
+    width: 2em;
+    top:30%;
+    left:20%;
+
+  }
+  &:nth-child(12){
+    @include animation(planet2,470s,forwards,infinite);
+    height:1em;
+    width: 1em;
+    top:60%;
+    left:20%;
+    position: fixed;
+  }
+  &:nth-child(13){
+    @include animation(planet2,470s,forwards,infinite);
     height:1em;
     width: 1em;
     top:60%;
@@ -191,7 +227,7 @@ main {
 
 
   50%{
-  @include transform(translate(60vw,-10vh));
+  @include transform(translate(30vw,-10vh));
 
   }
 
@@ -295,13 +331,13 @@ main {
 
 
   50%{
-  @include transform(translate(80vw,20vh) rotate(900deg));
+  @include transform(translate(80vw,20vh));
 
   }
 
 
   100%{
-  @include transform(translate(0,0) rotate(0deg));
+  @include transform(translate(0,0));
 
   }
 };

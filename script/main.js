@@ -25,4 +25,5 @@ var detectScrollLength = (leng, id) => {
 
 detectScrollLength(140,'portfolio');
 detectScrollLength(370,'gh');
-detectScrollLength(480,'facebook');
+detectScrollLength(480,'mail');
+detectScrollLength(710,'facebook');
