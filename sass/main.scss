@@ -1,4 +1,6 @@
 @import "varmix";
+@import "header";
+
 
 h1, h2, h3, h4, a, p, {
   color: white;
@@ -9,7 +11,7 @@ h1 {
 }
 
 h2{
-  
+
 }
 
 a {
@@ -20,6 +22,7 @@ html, body{
   overflow-x: hidden;
   margin:0;
   padding:0;
+  z-index:1;
 }
 body {
   background: #DAE2F8; /* fallback for old browsers */
@@ -38,15 +41,46 @@ main {
   @include flex-direction(column);
   @include justify-content(center);
   @include align-items(center);
+  z-index:2;
 }
 
 .space-ship {
-  display: none;
+  position: absolute;
+  top:-20%;
+  left:20%;
   width: 0;
   height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 50px dashed $heading-color;
+  border-top: 10px dotted transparent;
+  border-bottom: 10px dotted transparent;
+  border-left: 25px dotted $siris;
+  @include animation(ship,5s,forwards,infinite);
+  z-index:2000;
+}
+
+@include keyframe(ship){
+
+  0% {
+    @include transform(translate(0,0) rotate(25deg));
+  }
+
+
+
+  50%{
+  @include transform(translate(30vw,60vh) rotate(65deg));
+
+  }
+
+
+
+  75%{
+  @include transform(translate(30vw,70vh) rotate(525deg));
+
+  }
+
+  100%{
+    @include transform(translate(-40vw,70vh) rotate(465deg));
+  }
+
 }
 
 
@@ -76,6 +110,7 @@ main {
     padding:0;
   }
   &:nth-child(1){
+    //background:$siris;
     @include fade(hide);
     visibility: hidden;
     height:22em;
@@ -125,6 +160,7 @@ main {
     top:170%;
     left:40%;
     visibility: hidden;
+    //background: $siris;
     @include fade(hide);
     &.active{
       @include fade(show);
@@ -134,7 +170,7 @@ main {
     @include animation(planet5,200s,forwards,infinite);
     height:5em;
     width:5em ;
-    top:140%;
+    top:145%;
     left:10%;
     visibility: hidden;
     @include fade(hide);
@@ -149,7 +185,7 @@ main {
 
     top:70%;
     left:70%;
-    background: $siris;
+  //  background: $siris;
     z-index:1;
   }
   &:nth-child(7){
@@ -159,7 +195,7 @@ main {
     top:10%;
     left:80%;
     position: fixed;
-    background: $siris;
+  //  background: $siris;
   }
   &:nth-child(8){
     @include animation(planet2,370s,forwards,infinite);
@@ -177,7 +213,7 @@ main {
     top:100%;
     left:30%;
     position: fixed;
-    background: $siris;
+  //  background: $siris;
   }
   &:nth-child(10){
     @include animation(planet2,470s,forwards,infinite);
@@ -331,7 +367,7 @@ main {
 
 
   50%{
-  @include transform(translate(80vw,20vh));
+  @include transform(translate(80vw,0));
 
   }
 
