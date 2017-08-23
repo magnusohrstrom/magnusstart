@@ -13,17 +13,20 @@ var detectUpScrollAndToggleHeader = () => {
 }
 
 
-var detectScrollLength = (leng, id) => {
+var detectScrollLength = (leng, id, className) => {
 
   $(window).on('scroll', function() {
     st = $(this).scrollTop();
     st <= leng ? document.getElementById(id).classList.remove('active'):
-      document.getElementById(id).classList.add('active');
+      document.getElementById(id).classList.add(className);
     console.log(st);
   });
 }
 
-detectScrollLength(140,'portfolio');
-detectScrollLength(370,'gh');
-detectScrollLength(590,'mail');
-detectScrollLength(760,'facebook');
+detectScrollLength(140,'portfolio','active');
+detectScrollLength(370,'gh','active');
+detectScrollLength(470, 'gh','translate-top');
+detectScrollLength(590,'mail','active');
+detectScrollLength(610, 'mail','translate-top');
+detectScrollLength(760,'facebook','active');
+detectScrollLength(790, 'facebook','translate-top');

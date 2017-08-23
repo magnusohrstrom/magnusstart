@@ -53,7 +53,7 @@ main {
   border-top: 10px dotted transparent;
   border-bottom: 10px dotted transparent;
   border-left: 25px dotted $siris;
-  @include animation(ship,5s,forwards,infinite);
+  //@include animation(ship,5s,forwards,infinite);
   z-index:2000;
 }
 
@@ -116,7 +116,7 @@ main {
     height:22em;
     width:22em;
     top:90%;
-    left:20%;
+    left:40%;
     @include breakpoint(large){
       width: 14em;
       height: 14em;
@@ -129,9 +129,10 @@ main {
       @include fade(show);
       visibility: visible;
     };
+
   }
   &:nth-child(2){
-    @include animation(planet2,270s,forwards,infinite);
+    @include animation(planet2,570s,forwards,infinite);
     height:8em;
     width: 8em;
     top:130%;
@@ -140,6 +141,10 @@ main {
     visibility: hidden;
     &.active {
       @include fade(show);
+    }
+    &.translate-top {
+      position: fixed;
+      top:2%;
     }
 
   }
@@ -154,7 +159,7 @@ main {
 
   }
   &:nth-child(4){
-    @include animation(planet4,250s,forwards,infinite);
+    @include animation(planet4,550s,forwards,infinite);
     height:3.5em;
     width: 3.5em;
     top:170%;
@@ -167,11 +172,11 @@ main {
     }
   }
   &:nth-child(5){
-    @include animation(planet5,200s,forwards,infinite);
+    @include animation(planet5,500s,forwards,infinite);
     height:5em;
     width:5em ;
     top:145%;
-    left:10%;
+    left:30%;
     visibility: hidden;
     @include fade(hide);
     &.active{
@@ -179,12 +184,12 @@ main {
     }
   }
   &:nth-child(6){
-    @include animation(planet6,200s,forwards,infinite);
+    @include animation(planet6,500s,forwards,infinite);
     height:2em;
     width: 2em;
 
     top:70%;
-    left:70%;
+    left:60%;
   //  background: $siris;
     z-index:1;
   }
@@ -409,8 +414,8 @@ main {
   background: $heading-color;
   z-index:100;
   @include breakpoint(smedium){
-    width: 20em;
-    height: 20em;
+    width: 90vw;
+    height: 90vw;
     & h1 {
       font-size:2em;
     }

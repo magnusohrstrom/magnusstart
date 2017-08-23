@@ -72,27 +72,6 @@ main {
   border-top: 10px dotted transparent;
   border-bottom: 10px dotted transparent;
   border-left: 25px dotted #FF006C;
-  -webkit-animation-name: ship;
-  -webkit-animation-duration: 5s;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: infinite;
-  /* forward prevents the animation from restarting! */
-  -moz-animation-name: ship;
-  -moz-animation-duration: 5s;
-  -moz-animation-fill-mode: forwards;
-  -moz-animation-iteration-count: infinite;
-  -ms-animation-name: ship;
-  -ms-animation-duration: 5s;
-  -ms-animation-fill-mode: forwards;
-  -ms-animation-iteration-count: infinite;
-  -o-animation-name: ship;
-  -o-animation-duration: 5s;
-  -o-animation-fill-mode: forwards;
-  -o-animation-iteration-count: infinite;
-  animation-name: ship;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
   z-index: 2000; }
 
 @-webkit-keyframes ship {
@@ -266,7 +245,7 @@ main {
     height: 22em;
     width: 22em;
     top: 90%;
-    left: 20%;
+    left: 40%;
     -webkit-animation-name: planet-portfolio;
     -webkit-animation-duration: 200s;
     -webkit-animation-fill-mode: forwards;
@@ -301,24 +280,24 @@ main {
       visibility: visible; }
   .planet:nth-child(2) {
     -webkit-animation-name: planet2;
-    -webkit-animation-duration: 270s;
+    -webkit-animation-duration: 570s;
     -webkit-animation-fill-mode: forwards;
     -webkit-animation-iteration-count: infinite;
     /* forward prevents the animation from restarting! */
     -moz-animation-name: planet2;
-    -moz-animation-duration: 270s;
+    -moz-animation-duration: 570s;
     -moz-animation-fill-mode: forwards;
     -moz-animation-iteration-count: infinite;
     -ms-animation-name: planet2;
-    -ms-animation-duration: 270s;
+    -ms-animation-duration: 570s;
     -ms-animation-fill-mode: forwards;
     -ms-animation-iteration-count: infinite;
     -o-animation-name: planet2;
-    -o-animation-duration: 270s;
+    -o-animation-duration: 570s;
     -o-animation-fill-mode: forwards;
     -o-animation-iteration-count: infinite;
     animation-name: planet2;
-    animation-duration: 270s;
+    animation-duration: 570s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     height: 8em;
@@ -333,6 +312,9 @@ main {
       visibility: visible;
       opacity: 1;
       transition: visibility 0.7s, opacity 0.7s; }
+    .planet:nth-child(2).translate-top {
+      position: fixed;
+      top: 2%; }
   .planet:nth-child(3) {
     -webkit-animation-name: planet2;
     -webkit-animation-duration: 370s;
@@ -362,24 +344,24 @@ main {
     position: fixed; }
   .planet:nth-child(4) {
     -webkit-animation-name: planet4;
-    -webkit-animation-duration: 250s;
+    -webkit-animation-duration: 550s;
     -webkit-animation-fill-mode: forwards;
     -webkit-animation-iteration-count: infinite;
     /* forward prevents the animation from restarting! */
     -moz-animation-name: planet4;
-    -moz-animation-duration: 250s;
+    -moz-animation-duration: 550s;
     -moz-animation-fill-mode: forwards;
     -moz-animation-iteration-count: infinite;
     -ms-animation-name: planet4;
-    -ms-animation-duration: 250s;
+    -ms-animation-duration: 550s;
     -ms-animation-fill-mode: forwards;
     -ms-animation-iteration-count: infinite;
     -o-animation-name: planet4;
-    -o-animation-duration: 250s;
+    -o-animation-duration: 550s;
     -o-animation-fill-mode: forwards;
     -o-animation-iteration-count: infinite;
     animation-name: planet4;
-    animation-duration: 250s;
+    animation-duration: 550s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     height: 3.5em;
@@ -396,30 +378,30 @@ main {
       transition: visibility 0.7s, opacity 0.7s; }
   .planet:nth-child(5) {
     -webkit-animation-name: planet5;
-    -webkit-animation-duration: 200s;
+    -webkit-animation-duration: 500s;
     -webkit-animation-fill-mode: forwards;
     -webkit-animation-iteration-count: infinite;
     /* forward prevents the animation from restarting! */
     -moz-animation-name: planet5;
-    -moz-animation-duration: 200s;
+    -moz-animation-duration: 500s;
     -moz-animation-fill-mode: forwards;
     -moz-animation-iteration-count: infinite;
     -ms-animation-name: planet5;
-    -ms-animation-duration: 200s;
+    -ms-animation-duration: 500s;
     -ms-animation-fill-mode: forwards;
     -ms-animation-iteration-count: infinite;
     -o-animation-name: planet5;
-    -o-animation-duration: 200s;
+    -o-animation-duration: 500s;
     -o-animation-fill-mode: forwards;
     -o-animation-iteration-count: infinite;
     animation-name: planet5;
-    animation-duration: 200s;
+    animation-duration: 500s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     height: 5em;
     width: 5em;
     top: 145%;
-    left: 10%;
+    left: 30%;
     visibility: hidden;
     visibility: hidden;
     opacity: 0;
@@ -430,30 +412,30 @@ main {
       transition: visibility 0.7s, opacity 0.7s; }
   .planet:nth-child(6) {
     -webkit-animation-name: planet6;
-    -webkit-animation-duration: 200s;
+    -webkit-animation-duration: 500s;
     -webkit-animation-fill-mode: forwards;
     -webkit-animation-iteration-count: infinite;
     /* forward prevents the animation from restarting! */
     -moz-animation-name: planet6;
-    -moz-animation-duration: 200s;
+    -moz-animation-duration: 500s;
     -moz-animation-fill-mode: forwards;
     -moz-animation-iteration-count: infinite;
     -ms-animation-name: planet6;
-    -ms-animation-duration: 200s;
+    -ms-animation-duration: 500s;
     -ms-animation-fill-mode: forwards;
     -ms-animation-iteration-count: infinite;
     -o-animation-name: planet6;
-    -o-animation-duration: 200s;
+    -o-animation-duration: 500s;
     -o-animation-fill-mode: forwards;
     -o-animation-iteration-count: infinite;
     animation-name: planet6;
-    animation-duration: 200s;
+    animation-duration: 500s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     height: 2em;
     width: 2em;
     top: 70%;
-    left: 70%;
+    left: 60%;
     z-index: 1; }
   .planet:nth-child(7) {
     -webkit-animation-name: planet2;
@@ -1342,8 +1324,8 @@ main {
   z-index: 100; }
   @media (max-width: 785px) {
     .loading-container {
-      width: 20em;
-      height: 20em; }
+      width: 90vw;
+      height: 90vw; }
       .loading-container h1 {
         font-size: 2em; } }
   .loading-container.active {
